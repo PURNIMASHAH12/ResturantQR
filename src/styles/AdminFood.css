@@ -1,0 +1,248 @@
+.admin-food {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+.food-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.food-header h1 {
+  margin: 0;
+}
+
+.food-header p {
+  color: #777;
+}
+
+.food-count {
+  background: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 12px #ddd;
+}
+
+.food-count b {
+  display: block;
+  font-size: 28px;
+}
+
+.food-count span {
+  color: #777;
+}
+
+.food-form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 15px #ddd;
+}
+
+.food-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.food-form input,
+.food-form select,
+.food-form textarea,
+.food-tools input,
+.food-tools select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.food-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.available {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.form-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.form-buttons button,
+.food-actions button {
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-buttons button {
+  background: #222;
+  color: white;
+}
+
+.form-buttons .cancel {
+  background: #ddd;
+  color: #222;
+}
+
+.food-tools {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.food-tools input {
+  flex: 1;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px #ddd;
+}
+
+.food-image {
+  height: 180px;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-image > span:first-child {
+  font-size: 50px;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: white;
+}
+
+.available {
+  color: green;
+}
+
+.unavailable {
+  color: red;
+}
+
+.food-info {
+  padding: 18px;
+}
+
+.food-info small {
+  color: #777;
+}
+
+.food-info h2 {
+  margin: 7px 0;
+}
+
+.food-info p {
+  color: #666;
+  min-height: 40px;
+}
+
+.food-info strong {
+  font-size: 20px;
+}
+
+.food-actions {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #eee;
+}
+
+.food-actions button {
+  flex: 1;
+  background: #eee;
+}
+
+.food-actions .delete {
+  background: #ffe5e5;
+  color: #d00;
+}
+
+.empty-food {
+  text-align: center;
+  padding: 50px;
+  color: #777;
+}
+
+@media (max-width: 800px) {
+  .food-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .food-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .admin-food {
+    padding: 15px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-header {
+    align-items: flex-start;
+  }
+}
+.veg-symbol {
+  color: green;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.nonveg-symbol {
+  color: red;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.veg-symbol {
+  color: green;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.nonveg-symbol {
+  color: red;
+  font-size: 16px;
+  margin-right: 8px;
+}

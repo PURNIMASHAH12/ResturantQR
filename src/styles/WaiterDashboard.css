@@ -1,0 +1,295 @@
+.waiter-dashboard {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+
+.waiter-dashboard h1 {
+  margin-bottom: 5px;
+}
+
+.waiter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.waiter-header button,
+.waiter-buttons button,
+.edit-actions button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.waiter-header button {
+  background: #222;
+  color: white;
+}
+
+.waiter-header button:hover {
+  background: #444;
+}
+
+.waiter-section {
+  margin-top: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header span {
+  background: #e63946;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.waiter-orders {
+  display: grid;
+  gap: 20px;
+}
+
+.waiter-order-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-header h2 {
+  margin: 0;
+}
+
+.order-header span {
+  background: #fff3cd;
+  color: #856404;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.waiter-order-item,
+.edit-order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.waiter-order-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.waiter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.waiter-buttons button:first-child {
+  background: #f1f1f1;
+}
+
+.waiter-buttons button:last-child {
+  background: #198754;
+  color: white;
+}
+
+.waiter-buttons button:hover {
+  opacity: 0.85;
+}
+
+.edit-order-section {
+  margin-top: 20px;
+  padding: 18px;
+  background: #fafafa;
+  border-radius: 10px;
+}
+
+.edit-order-item {
+  flex-wrap: wrap;
+}
+
+.edit-order-item button {
+  border: none;
+  background: #eee;
+  padding: 7px 11px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-order-item input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-actions button:first-child {
+  background: #ddd;
+}
+
+.edit-actions button:last-child {
+  background: #198754;
+  color: white;
+}
+
+.edit-order-section > button {
+  margin: 5px;
+  padding: 9px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.no-orders {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  color: #777;
+}
+
+.error-message {
+  background: #ffe5e5;
+  color: #c1121f;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .waiter-dashboard {
+    padding: 15px;
+  }
+
+  .waiter-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .waiter-order-item {
+    align-items: flex-start;
+  }
+
+  .waiter-buttons {
+    flex-direction: column;
+  }
+
+  .waiter-buttons button {
+    width: 100%;
+  }
+}
+.waiter-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.waiter-stats div {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px #0001;
+}
+
+.waiter-stats span {
+  font-size: 25px;
+}
+
+.waiter-stats b {
+  display: block;
+  font-size: 28px;
+  margin: 5px;
+}
+
+.waiter-stats p {
+  margin: 0;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .waiter-stats {
+    grid-template-columns: 1fr;
+  }
+}
+.new-order-alert {
+  background: #e63946;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+.new-order-alert button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.01);
+  }
+}
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-top h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.order-top p {
+  margin: 0;
+  color: #666;
+}
+
+.waiting-badge {
+  background: #fff3cd;
+  color: #856404;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
