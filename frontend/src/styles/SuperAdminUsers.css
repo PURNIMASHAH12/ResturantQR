@@ -1,0 +1,256 @@
+.superadmin-users-page {
+  min-height: 100vh;
+  padding: 100px 32px 60px;
+
+  background: #f7f4ee;
+  color: #25231f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+.users-header {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+}
+
+.users-header span {
+  color: #a08355;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.users-header h1 {
+  margin: 8px 0 6px;
+
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.users-header p {
+  margin: 0;
+
+  color: #817c73;
+
+  font-size: 14px;
+}
+
+.users-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 24px;
+
+  background: #fffdf9;
+
+  border: 1px solid #e9e1d4;
+  border-radius: 17px;
+
+  box-shadow:
+    0 2px 5px rgba(68, 52, 29, 0.025),
+    0 10px 28px rgba(68, 52, 29, 0.045);
+}
+
+.users-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.users-panel-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.users-panel-header span {
+  padding: 6px 10px;
+
+  border-radius: 8px;
+
+  background: #f4ede3;
+  color: #806846;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.users-list {
+  display: grid;
+  gap: 10px;
+}
+
+.user-card {
+  display: grid;
+
+  grid-template-columns: 1.5fr 0.7fr 0.5fr auto;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 14px;
+
+  border: 1px solid #ebe5dc;
+  border-radius: 12px;
+
+  background: #fbfaf7;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #28231c;
+  color: #f4e4ca;
+
+  font-weight: 700;
+}
+
+.user-info h3 {
+  margin: 0 0 3px;
+
+  font-size: 13px;
+}
+
+.user-info p {
+  margin: 0;
+
+  color: #90897e;
+
+  font-size: 10px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role span {
+  display: inline-block;
+
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.role-admin {
+  background: #f3eadb;
+  color: #8d6d40;
+}
+
+.role-waiter {
+  background: #e8f4ec;
+  color: #4d9869;
+}
+
+.user-status {
+  color: #4d9869;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.manage-button {
+  border: none;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background: #28231c;
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.manage-button:hover {
+  background: #40382d;
+}
+
+.no-users {
+  padding: 40px;
+
+  border: 1px dashed #ddd3c5;
+  border-radius: 12px;
+
+  text-align: center;
+
+  color: #90897e;
+
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .superadmin-users-page {
+    padding: 80px 14px 40px;
+  }
+
+  .users-header h1 {
+    font-size: 27px;
+  }
+
+  .users-panel {
+    padding: 16px;
+  }
+
+  .user-card {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+  }
+
+  .user-info {
+    grid-column: 1 / -1;
+  }
+
+  .user-role {
+    grid-column: 1;
+  }
+
+  .user-status {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .manage-button {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+

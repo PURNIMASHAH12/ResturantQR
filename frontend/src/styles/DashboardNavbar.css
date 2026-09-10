@@ -1,0 +1,491 @@
+
+/* =========================================
+   DASHBOARD NAVBAR
+========================================= */
+
+.dashboard-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 72px;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #eeeeee;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.dashboard-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.dashboard-logo div {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-logo strong {
+  font-size: 18px;
+  color: #222;
+  line-height: 1.3;
+}
+
+.dashboard-logo small {
+  margin-top: 2px;
+
+  font-size: 11px;
+  color: #888;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.dashboard-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 4px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   NAVIGATION BUTTONS
+========================================= */
+
+.dashboard-nav-links button {
+  position: relative;
+
+  border: none;
+  background: transparent;
+
+  padding: 10px 14px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #666;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.dashboard-nav-links button:hover {
+  background: #f7f7f7;
+  color: #222;
+}
+
+/* =========================================
+   ACTIVE NAVIGATION TAB
+========================================= */
+
+.dashboard-nav-links button.active {
+  background: #f3ebe4;
+  color: #7a4f32;
+  position: relative;
+}
+
+.dashboard-nav-links button.active::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+
+  width: 20px;
+  height: 2px;
+
+  background: #8b5e3c;
+  border-radius: 2px;
+
+  transform: translateX(-50%);
+}/* =========================================
+   WEBSITE BUTTON
+========================================= */
+
+.dashboard-nav-links .website-btn {
+  margin-left: 8px;
+
+  background: #111;
+  color: #fff;
+
+  padding: 11px 18px;
+
+  border-radius: 9px;
+}
+
+.dashboard-nav-links .website-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .dashboard-navbar {
+    height: 64px;
+    min-height: 64px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    overflow: visible;
+  }
+
+
+  /* LOGO */
+
+  .dashboard-logo {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .dashboard-logo strong {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .dashboard-logo small {
+    display: none;
+  }
+
+
+  /* NAVIGATION */
+
+  .dashboard-nav-links {
+    width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-shrink: 1;
+    min-width: 0;
+
+    gap: 2px;
+
+    margin-left: auto;
+
+    white-space: nowrap;
+  }
+
+
+  /* BUTTONS */
+
+  .dashboard-nav-links button {
+    flex-shrink: 1;
+
+    height: 38px;
+    min-height: 38px;
+
+    padding: 7px 7px;
+
+    font-size: 10px;
+
+    line-height: 22px;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ACTIVE TAB */
+
+  .dashboard-nav-links button.active {
+    background: #f3f3f3;
+  }
+
+  .dashboard-nav-links button.active::after {
+    bottom: 3px;
+
+    width: 14px;
+    height: 2px;
+  }
+
+
+  /* WEBSITE BUTTON */
+
+  .dashboard-nav-links .website-btn {
+    flex-shrink: 1;
+
+    margin-left: 2px;
+
+    height: 38px;
+    min-height: 38px;
+
+    padding: 8px 10px;
+
+    font-size: 10px;
+
+    line-height: 20px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .dashboard-navbar {
+    height: 58px;
+    min-height: 58px;
+
+    padding: 0 6px;
+
+    gap: 3px;
+
+    overflow: visible;
+  }
+
+
+  /* LOGO */
+
+  .dashboard-logo {
+    flex-shrink: 0;
+  }
+
+  .dashboard-logo strong {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+
+  /* NAVIGATION */
+
+  .dashboard-nav-links {
+    gap: 0;
+
+    flex-shrink: 1;
+
+    min-width: 0;
+
+    margin-left: auto;
+  }
+
+
+  /* BUTTONS */
+
+  .dashboard-nav-links button {
+    height: 34px;
+    min-height: 34px;
+
+    padding: 5px 5px;
+
+    font-size: 9px;
+
+    line-height: 21px;
+
+    flex-shrink: 1;
+  }
+
+
+  /* ACTIVE TAB */
+
+  .dashboard-nav-links button.active {
+    background: #f3f3f3;
+  }
+
+  .dashboard-nav-links button.active::after {
+    bottom: 2px;
+
+    width: 12px;
+    height: 2px;
+  }
+
+
+  /* WEBSITE BUTTON */
+
+  .dashboard-nav-links .website-btn {
+    height: 34px;
+    min-height: 34px;
+
+    margin-left: 2px;
+
+    padding: 6px 7px;
+
+    font-size: 9px;
+
+    line-height: 20px;
+  }
+}
+
+
+/* =========================================
+   NAVBAR HELP
+========================================= */
+
+.navbar-help {
+  position: absolute;
+
+  top: 65px;
+  right: 25px;
+
+  width: 300px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  padding: 18px;
+
+  z-index: 100000;
+
+  white-space: normal;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HELP HEADER
+========================================= */
+
+.navbar-help-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.navbar-help-header strong {
+  font-size: 15px;
+  color: #222;
+}
+
+
+/* =========================================
+   HELP CLOSE BUTTON
+========================================= */
+
+.navbar-help-close {
+  border: none !important;
+
+  background: transparent !important;
+
+  color: #555 !important;
+
+  padding: 2px 6px !important;
+
+  font-size: 20px !important;
+
+  cursor: pointer;
+}
+
+.navbar-help-close:hover {
+  background: transparent !important;
+  color: #111 !important;
+}
+
+
+/* =========================================
+   HELP CONTENT
+========================================= */
+
+.navbar-help-content {
+  padding-top: 10px;
+}
+
+.navbar-help-content p {
+  margin: 10px 0;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.navbar-help-content p strong {
+  color: #222;
+}
+
+
+/* =========================================
+   MOBILE HELP PANEL
+========================================= */
+
+@media (max-width: 430px) {
+
+  .navbar-help {
+    top: 59px;
+
+    right: 8px;
+    left: 8px;
+
+    width: auto;
+
+    max-width: none;
+
+    padding: 15px;
+
+    z-index: 100001;
+  }
+
+  .navbar-help-content p {
+    font-size: 12px;
+  }
+}

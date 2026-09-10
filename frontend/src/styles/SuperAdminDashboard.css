@@ -1,0 +1,514 @@
+.superadmin-page {
+  min-height: 100vh;
+  padding: 100px 32px 60px;
+  background: #f7f4ee;
+  color: #25231f;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+.superadmin-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.superadmin-header span {
+  color: #a08355;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.superadmin-header h1 {
+  margin: 8px 0 6px;
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.superadmin-header p {
+  margin: 0;
+  color: #817c73;
+  font-size: 14px;
+}
+
+.superadmin-badge {
+  padding: 12px 16px;
+
+  border-radius: 12px;
+
+  background: #28231c;
+  color: #f4e4ca;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.superadmin-stats {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.superadmin-card {
+  padding: 24px;
+
+  background: #fffdf9;
+
+  border: 1px solid #e9e1d4;
+  border-radius: 17px;
+
+  box-shadow:
+    0 2px 5px rgba(68, 52, 29, 0.025),
+    0 10px 28px rgba(68, 52, 29, 0.045);
+}
+
+.superadmin-card span {
+  color: #a28f75;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.superadmin-card h2 {
+  margin: 14px 0 5px;
+
+  color: #292620;
+
+  font-size: 32px;
+}
+
+.superadmin-card p {
+  margin: 0;
+
+  color: #817c73;
+
+  font-size: 12px;
+}
+
+.superadmin-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 24px;
+
+  background: #fffdf9;
+
+  border: 1px solid #e9e1d4;
+  border-radius: 17px;
+
+  box-shadow:
+    0 2px 5px rgba(68, 52, 29, 0.025),
+    0 10px 28px rgba(68, 52, 29, 0.045);
+}
+
+.panel-title span {
+  color: #a28f75;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.panel-title h2 {
+  margin: 7px 0 20px;
+
+  color: #292620;
+
+  font-size: 21px;
+}
+
+.admin-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.admin-actions button {
+  padding: 15px;
+
+  border: 1px solid #ebe5dc;
+  border-radius: 12px;
+
+  background: #fbfaf7;
+  color: #302d27;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-actions button:hover {
+  background: #f7f1e7;
+  border-color: #dfd1bd;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .superadmin-page {
+    padding: 80px 14px 40px;
+  }
+
+  .superadmin-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .superadmin-header h1 {
+    font-size: 27px;
+  }
+
+  .superadmin-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .admin-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .superadmin-panel {
+    padding: 18px;
+  }
+}
+/* =========================================================
+   STAFF ACCOUNTS
+========================================================= */
+
+.staff-panel {
+  margin-top: 20px;
+}
+
+.staff-list {
+  display: grid;
+  gap: 10px;
+}
+
+.staff-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 14px 16px;
+
+  background: #fbfaf7;
+
+  border: 1px solid #ebe5dc;
+  border-radius: 12px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.staff-card:hover {
+  background: #f7f1e7;
+  border-color: #dfd1bd;
+  transform: translateY(-2px);
+}
+
+.staff-info {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.staff-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #f3eadb;
+
+  font-size: 18px;
+}
+
+.staff-info h3 {
+  margin: 0 0 4px;
+
+  color: #38342d;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.staff-info p {
+  margin: 0;
+
+  color: #999187;
+
+  font-size: 11px;
+
+  overflow-wrap: anywhere;
+}
+
+.staff-role {
+  flex-shrink: 0;
+
+  padding: 7px 10px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+.staff-role.admin {
+  background: #eee9f7;
+  color: #75639a;
+}
+
+.staff-role.waiter {
+  background: #e8f4ec;
+  color: #4d9869;
+}
+
+.empty-staff {
+  padding: 30px 20px;
+
+  border: 1px dashed #ddd3c5;
+  border-radius: 12px;
+
+  background: #fbfaf7;
+
+  text-align: center;
+}
+
+.empty-staff p {
+  margin: 0;
+
+  color: #999187;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   STAFF — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .staff-panel {
+    margin-top: 10px;
+  }
+
+  .staff-card {
+    padding: 12px;
+
+    gap: 10px;
+  }
+
+  .staff-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+  }
+
+  .staff-info {
+    gap: 9px;
+  }
+
+  .staff-info h3 {
+    font-size: 11px;
+  }
+
+  .staff-info p {
+    font-size: 9px;
+  }
+
+  .staff-role {
+    padding: 6px 8px;
+
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   STAFF — VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .staff-card {
+    align-items: flex-start;
+  }
+
+  .staff-info p {
+    max-width: 150px;
+  }
+
+  .staff-role {
+    font-size: 6px;
+    padding: 5px 7px;
+  }
+}
+/* =========================================================
+   SUPER ADMIN MESSAGE
+========================================================= */
+
+.superadmin-message {
+  max-width: 1200px;
+
+  margin: 0 auto 15px;
+
+  padding: 11px 14px;
+
+  border-radius: 10px;
+
+  background: #e8f4ec;
+  color: #4d9869;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   STAFF ACCOUNT RIGHT SIDE
+========================================================= */
+
+.staff-account-right {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ACCOUNT STATUS
+========================================================= */
+
+.staff-status {
+  padding: 6px 8px;
+
+  border-radius: 7px;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+}
+
+.staff-status.active {
+  background: #e8f4ec;
+  color: #4d9869;
+}
+
+.staff-status.disabled {
+  background: #f8e9df;
+  color: #b66d3d;
+}
+
+
+/* =========================================================
+   STAFF ACTION BUTTON
+========================================================= */
+
+.staff-action {
+  border: none;
+
+  padding: 7px 10px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.staff-action.disable {
+  background: #f8e9df;
+  color: #b66d3d;
+}
+
+.staff-action.activate {
+  background: #e8f4ec;
+  color: #4d9869;
+}
+
+.staff-action:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .staff-card {
+    align-items: flex-start;
+  }
+
+  .staff-account-right {
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 5px;
+  }
+
+  .staff-action {
+    padding: 6px 8px;
+
+    font-size: 8px;
+  }
+
+  .staff-status {
+    font-size: 7px;
+  }
+
+  .superadmin-message {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,196 @@
+
+.site-footer {
+  width: 100%;
+  background: #181818;
+  color: #ffffff;
+  margin-top: auto;
+}
+
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 55px 30px 45px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+
+  gap: 70px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand h2 {
+  margin: 0 0 15px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.footer-brand p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: #a9a9a9;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.footer-links h3,
+.footer-info h3 {
+  margin: 0 0 18px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-links a {
+  width: fit-content;
+
+  color: #a9a9a9;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.footer-info p {
+  margin: 0 0 9px;
+
+  color: #a9a9a9;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 20px 30px;
+
+  border-top: 1px solid #303030;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 45px 25px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    padding: 18px 25px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 40px 20px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    padding: 18px 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 6px;
+  }
+}
+

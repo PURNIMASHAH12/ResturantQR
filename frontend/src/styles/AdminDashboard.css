@@ -1,0 +1,1271 @@
+/* =========================================================
+   RESTAURANT QR — ADMIN DASHBOARD
+   Warm • Elegant • Professional • Responsive
+========================================================= */
+
+.admin-dashboard {
+  min-height: 100vh;
+  width: 100%;
+  background: #f7f4ee;
+  color: #25231f;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.admin-dashboard *,
+.admin-dashboard *::before,
+.admin-dashboard *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.admin-page {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 100px 32px 70px;
+}
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+.admin-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.admin-label {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #a08355;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.admin-top h1 {
+  margin: 0;
+  color: #24221e;
+  font-size: 35px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -1.1px;
+}
+
+.admin-top p {
+  margin: 9px 0 0;
+  color: #817c73;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   STATISTICS GRID
+========================================================= */
+
+.admin-dashboard .admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.admin-dashboard .stat-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 174px;
+  padding: 21px;
+  overflow: hidden;
+
+  background: #fffdf9;
+  border: 1px solid #e9e1d4;
+  border-radius: 17px;
+
+  box-shadow:
+    0 2px 5px rgba(68, 52, 29, 0.025),
+    0 10px 28px rgba(68, 52, 29, 0.045);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.22s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* =========================================================
+   STAT CARD HOVER
+========================================================= */
+
+.admin-dashboard .stat-card:hover {
+  background: #171717;
+  color: #ffffff;
+  border-color: #171717;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================================================
+   STAT TOP
+========================================================= */
+
+.admin-dashboard .stat-top {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+  min-width: 0;
+}
+
+/* =========================================================
+   STAT ICON / LABEL
+========================================================= */
+
+.admin-dashboard .stat-icon {
+  position: relative;
+  z-index: 3;
+
+  width: 62px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin: 0;
+  padding: 0 7px;
+
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-size: 10px !important;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Individual icon colors */
+
+.admin-dashboard .stat-card:nth-child(1) .stat-icon {
+  background: #f3eadb;
+  color: #8d6d40;
+}
+
+.admin-dashboard .stat-card:nth-child(2) .stat-icon {
+  background: #e8f4ec;
+  color: #4d9869;
+}
+
+.admin-dashboard .stat-card:nth-child(3) .stat-icon {
+  background: #f8e9df;
+  color: #b66d3d;
+}
+
+.admin-dashboard .stat-card:nth-child(4) .stat-icon {
+  background: #eee9f7;
+  color: #75639a;
+}
+
+/* Icon hover */
+
+.admin-dashboard .stat-card:hover .stat-icon {
+  background: #292929;
+  color: #ffffff;
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   STAT STATUS
+========================================================= */
+
+.admin-dashboard .stat-status {
+  flex-shrink: 0;
+
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  background: #f5f0e8;
+  color: #8d8375;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.admin-dashboard .stat-card:hover .stat-status {
+  background: #292929;
+  color: #d8d8d8;
+}
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.admin-dashboard .stat-card h2 {
+  position: relative;
+  z-index: 3;
+
+  display: block;
+
+  margin: 20px 0 4px;
+  padding: 0;
+
+  color: #292620;
+
+  line-height: 1.2;
+  font-size: 30px;
+  font-weight: 700;
+
+  text-align: left;
+}
+
+.admin-dashboard .stat-card:hover h2 {
+  color: #ffffff;
+}
+
+/* =========================================================
+   STAT DESCRIPTION
+========================================================= */
+
+.admin-dashboard .stat-card p {
+  position: relative;
+  z-index: 3;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: #817c73;
+
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+
+  text-align: left;
+}
+
+.admin-dashboard .stat-card:hover p {
+  color: #b5b5b5;
+}
+
+/* =========================================================
+   STAT LINK
+========================================================= */
+
+.admin-dashboard .stat-link {
+  position: relative;
+  z-index: 4;
+
+  display: block;
+
+  margin-top: 14px;
+
+  color: #75664f;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.admin-dashboard .stat-link:hover {
+  color: #9b7742;
+}
+
+.admin-dashboard .stat-card:hover .stat-link {
+  color: #ffffff;
+}
+
+/* =========================================================
+   STAT DECORATIVE CIRCLE
+========================================================= */
+
+.admin-dashboard .stat-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 125px;
+  height: 125px;
+
+  right: -55px;
+  bottom: -58px;
+
+  border-radius: 50%;
+
+  background: #faf5ec;
+
+  pointer-events: none;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.admin-dashboard .stat-card:hover::after {
+  background: #242424;
+  transform: scale(1.12);
+}
+
+/* =========================================================
+   REVENUE FILTER
+========================================================= */
+
+.admin-dashboard .revenue-filter {
+  appearance: none;
+
+  min-width: 91px;
+  max-width: 100%;
+
+  padding: 7px 24px 7px 9px;
+
+  border: 1px solid #e2d7c7;
+  border-radius: 8px;
+
+  background-color: #f7f1e7;
+  color: #75664f;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+  outline: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-dashboard .revenue-filter:hover {
+  background-color: #efe6d8;
+}
+
+.admin-dashboard .revenue-filter:focus {
+  border-color: #b99968;
+}
+
+.admin-dashboard .stat-card:hover .revenue-filter {
+  background: #292929;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
+
+.admin-dashboard .dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   DASHBOARD PANELS
+========================================================= */
+
+.admin-dashboard .dashboard-panel {
+  background: #fffdf9;
+  border: 1px solid #e9e1d4;
+  border-radius: 17px;
+
+  box-shadow:
+    0 2px 5px rgba(68, 52, 29, 0.025),
+    0 10px 28px rgba(68, 52, 29, 0.045);
+
+  overflow: hidden;
+}
+
+.admin-dashboard .panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 19px 21px;
+
+  border-bottom: 1px solid #eee7dc;
+}
+
+.admin-dashboard .panel-heading > div {
+  min-width: 0;
+}
+
+.admin-dashboard .panel-heading span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #a08355;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.admin-dashboard .panel-heading h2 {
+  margin: 0;
+
+  color: #292620;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.admin-dashboard .panel-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #f4ede3;
+  color: #8d6d40;
+
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.admin-dashboard .quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+
+  padding: 18px 21px;
+}
+
+.admin-dashboard .quick-actions button {
+  min-width: 0;
+
+  padding: 14px;
+
+  border: 1px solid #e7dfd2;
+  border-radius: 11px;
+
+  background: #faf7f1;
+  color: #4c463d;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-dashboard .quick-actions button:hover {
+  background: #171717;
+  border-color: #171717;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.admin-dashboard .quick-actions span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.admin-dashboard .quick-actions strong {
+  display: block;
+
+  color: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-dashboard .quick-actions small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #918a80;
+
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.admin-dashboard .quick-actions button:hover small {
+  color: #bdbdbd;
+}
+
+.admin-dashboard .quick-actions b {
+  font-weight: 700;
+}
+
+/* =========================================================
+   RESTAURANT STATUS
+========================================================= */
+
+.admin-dashboard .restaurant-status {
+  padding: 18px 21px;
+}
+
+.admin-dashboard .status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid #eee7dc;
+}
+
+.admin-dashboard .status-row:last-child {
+  border-bottom: none;
+}
+
+.admin-dashboard .status-symbol {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #f5f0e8;
+  color: #8d6d40;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.admin-dashboard .status-row > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.admin-dashboard .status-row strong {
+  display: block;
+
+  color: #39352f;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.admin-dashboard .status-row small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #948d82;
+
+  font-size: 9px;
+}
+
+.admin-dashboard .online-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #5caa78;
+
+  box-shadow: 0 0 0 4px rgba(92, 170, 120, 0.1);
+}
+
+/* =========================================================
+   LOWER GRID
+========================================================= */
+
+.admin-dashboard .lower-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* =========================================================
+   ORDERS PANEL
+========================================================= */
+
+.admin-dashboard .orders-panel .panel-heading button {
+  padding: 7px 10px;
+
+  border: 1px solid #e2d7c7;
+  border-radius: 7px;
+
+  background: #f7f1e7;
+  color: #75664f;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.admin-dashboard .orders-panel .panel-heading button:hover {
+  background: #171717;
+  border-color: #171717;
+  color: #ffffff;
+}
+
+/* =========================================================
+   RECENT ORDERS
+========================================================= */
+
+.admin-dashboard .recent-orders {
+  padding: 6px 21px 18px;
+}
+
+.admin-dashboard .recent-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #eee7dc;
+}
+
+.admin-dashboard .recent-order:last-child {
+  border-bottom: none;
+}
+
+.admin-dashboard .recent-order > div {
+  min-width: 0;
+}
+
+.admin-dashboard .recent-order strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #39352f;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.admin-dashboard .recent-order small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #948d82;
+
+  font-size: 9px;
+}
+
+.admin-dashboard .recent-order b {
+  flex-shrink: 0;
+
+  color: #75664f;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.admin-dashboard .empty-orders {
+  padding: 25px 0;
+
+  color: #948d82;
+
+  font-size: 11px;
+  text-align: center;
+}
+
+/* =========================================================
+   MENU PANEL
+========================================================= */
+
+.admin-dashboard .menu-panel {
+  position: relative;
+
+  padding: 21px;
+
+  overflow: hidden;
+
+  background: #171717;
+  color: #ffffff;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.admin-dashboard .menu-panel::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -75px;
+  bottom: -85px;
+
+  border-radius: 50%;
+
+  background: #242424;
+
+  pointer-events: none;
+}
+
+.admin-dashboard .menu-panel > * {
+  position: relative;
+  z-index: 2;
+}
+
+.admin-dashboard .menu-panel h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admin-dashboard .menu-panel p {
+  margin: 8px 0 18px;
+
+  color: #aaa;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.admin-dashboard .menu-panel button {
+  padding: 10px 13px;
+
+  border: 1px solid #444;
+  border-radius: 8px;
+
+  background: #292929;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.admin-dashboard .menu-panel button:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #171717;
+}
+
+/* =========================================================
+   ADMIN FOOTER CARD
+========================================================= */
+
+.admin-dashboard .admin-footer-card {
+  margin-top: 18px;
+
+  padding: 18px 21px;
+
+  background: #fffdf9;
+  border: 1px solid #e9e1d4;
+  border-radius: 17px;
+
+  color: #817c73;
+
+  font-size: 10px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .admin-dashboard .admin-page {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .admin-dashboard .admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-dashboard .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard .lower-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .admin-dashboard .admin-page {
+    padding: 82px 14px 50px;
+  }
+
+  .admin-dashboard .admin-top {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .admin-dashboard .admin-top h1 {
+    font-size: 28px;
+  }
+
+  .admin-dashboard .admin-top p {
+    font-size: 12px;
+  }
+
+  /* STATISTICS */
+
+  .admin-dashboard .admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-bottom: 13px;
+  }
+
+  .admin-dashboard .stat-card {
+    min-height: 145px;
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .admin-dashboard .stat-top {
+    gap: 6px;
+  }
+
+  .admin-dashboard .stat-icon {
+    width: 52px;
+    height: 40px;
+
+    padding: 0 6px;
+
+    border-radius: 10px;
+
+    font-size: 9px !important;
+  }
+
+  .admin-dashboard .stat-status {
+    padding: 5px 6px;
+
+    font-size: 7px;
+  }
+
+  .admin-dashboard .stat-card h2 {
+    margin-top: 16px;
+
+    font-size: 23px;
+    line-height: 1.15;
+  }
+
+  .admin-dashboard .stat-card p {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .admin-dashboard .stat-link {
+    margin-top: 10px;
+
+    font-size: 9px;
+  }
+
+  .admin-dashboard .revenue-filter {
+    min-width: 69px;
+
+    padding: 6px 18px 6px 7px;
+
+    font-size: 8px;
+  }
+
+  /* PANELS */
+
+  .admin-dashboard .dashboard-panel {
+    border-radius: 14px;
+  }
+
+  .admin-dashboard .panel-heading {
+    padding: 15px;
+  }
+
+  .admin-dashboard .panel-heading h2 {
+    font-size: 15px;
+  }
+
+  .admin-dashboard .quick-actions {
+    padding: 14px 15px;
+    gap: 8px;
+  }
+
+  .admin-dashboard .restaurant-status {
+    padding: 14px 15px;
+  }
+
+  .admin-dashboard .recent-orders {
+    padding: 5px 15px 15px;
+  }
+
+  .admin-dashboard .menu-panel {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .admin-dashboard .admin-footer-card {
+    margin-top: 13px;
+    padding: 15px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+  .admin-dashboard .admin-page {
+    padding: 70px 11px 50px;
+  }
+
+  .admin-dashboard .admin-top h1 {
+    font-size: 25px;
+  }
+
+  .admin-dashboard .stat-card {
+    min-height: 138px;
+    padding: 13px;
+  }
+
+  .admin-dashboard .stat-icon {
+    width: 48px;
+    height: 38px;
+
+    padding: 0 5px;
+
+    border-radius: 9px;
+
+    font-size: 8px !important;
+  }
+
+  .admin-dashboard .stat-card h2 {
+    margin-top: 15px;
+
+    font-size: 21px;
+  }
+
+  .admin-dashboard .stat-card p {
+    font-size: 9px;
+  }
+
+  .admin-dashboard .stat-link {
+    font-size: 8px;
+  }
+
+  .admin-dashboard .stat-status {
+    padding: 4px 5px;
+
+    font-size: 6px;
+  }
+
+  .admin-dashboard .revenue-filter {
+    min-width: 62px;
+
+    font-size: 7px;
+  }
+
+  .admin-dashboard .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .admin-dashboard .admin-page {
+    padding: 70px 9px 50px;
+  }
+
+  .admin-dashboard .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard .stat-card {
+    min-height: 130px;
+  }
+
+  .admin-dashboard .stat-card h2 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+  .admin-dashboard .stat-card:hover {
+    background: #fffdf9;
+    color: #25231f;
+    border-color: #e9e1d4;
+    transform: none;
+
+    box-shadow:
+      0 2px 5px rgba(68, 52, 29, 0.025),
+      0 10px 28px rgba(68, 52, 29, 0.045);
+  }
+
+  .admin-dashboard .stat-card:hover h2 {
+    color: #292620;
+  }
+
+  .admin-dashboard .stat-card:hover p {
+    color: #817c73;
+  }
+
+  .admin-dashboard .stat-card:hover .stat-link {
+    color: #75664f;
+  }
+
+  .admin-dashboard .stat-card:hover .stat-status {
+    background: #f5f0e8;
+    color: #8d8375;
+  }
+
+  .admin-dashboard .stat-card:hover::after {
+    background: #faf5ec;
+    transform: none;
+  }
+
+  .admin-dashboard .stat-card.mobile-active {
+    background: #171717;
+    color: #ffffff;
+    border-color: #171717;
+
+    box-shadow:
+      0 16px 36px rgba(0, 0, 0, 0.14);
+  }
+
+  .admin-dashboard .stat-card.mobile-active h2 {
+    color: #ffffff;
+  }
+
+  .admin-dashboard .stat-card.mobile-active p {
+    color: #b5b5b5;
+  }
+
+  .admin-dashboard .stat-card.mobile-active .stat-link {
+    color: #ffffff;
+  }
+
+  .admin-dashboard .stat-card.mobile-active .stat-status {
+    background: #292929;
+    color: #d8d8d8;
+  }
+
+  .admin-dashboard .stat-card.mobile-active::after {
+    background: #242424;
+    transform: scale(1.12);
+  }
+}/* =========================================================
+   COMPLETED + REVENUE DROPDOWN FIX
+========================================================= */
+
+.admin-dashboard .filter-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 50%;
+
+  overflow: hidden;
+}
+
+.admin-dashboard .filter-wrapper .revenue-filter {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  padding: 7px 25px 7px 9px;
+
+  border: 1px solid #e2d7c7;
+  border-radius: 8px;
+
+  background: #f7f1e7;
+  color: #75664f;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  box-sizing: border-box;
+}
+
+.admin-dashboard .filter-wrapper .dropdown-arrow {
+  position: absolute;
+
+  right: 8px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #75664f;
+
+  font-size: 7px;
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+.admin-dashboard .stat-card:hover .filter-wrapper .dropdown-arrow {
+  color: #ffffff;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .admin-dashboard .filter-wrapper {
+    max-width: 48%;
+  }
+
+  .admin-dashboard .filter-wrapper .revenue-filter {
+    padding: 6px 18px 6px 7px;
+    font-size: 8px;
+  }
+
+  .admin-dashboard .filter-wrapper .dropdown-arrow {
+    right: 6px;
+    font-size: 6px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+  .admin-dashboard .filter-wrapper {
+    max-width: 47%;
+  }
+
+  .admin-dashboard .filter-wrapper .revenue-filter {
+    padding: 6px 16px 6px 6px;
+    font-size: 7px;
+  }
+
+  .admin-dashboard .filter-wrapper .dropdown-arrow {
+    right: 5px;
+    font-size: 5px;
+  }
+}

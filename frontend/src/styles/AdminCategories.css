@@ -1,0 +1,399 @@
+/* =========================================
+   ADMIN CATEGORIES
+========================================= */
+
+.admin-categories {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 105px 30px 60px;
+  box-sizing: border-box;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: #25231f;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.categories-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+
+.categories-header p {
+  margin: 7px 0 0;
+  color: #77736b;
+  font-size: 14px;
+}
+
+/* CATEGORY COUNT */
+
+.category-count {
+  min-width: 125px;
+  padding: 16px 22px;
+  background: #ffffff;
+  border: 1px solid #e5dfd5;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.category-count strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.category-count span {
+  color: #888278;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.category-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 18px;
+  margin-bottom: 30px;
+
+  background: #ffffff;
+  border: 1px solid #e5dfd5;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+
+  box-sizing: border-box;
+}
+
+.category-form input {
+  flex: 1;
+  min-width: 0;
+
+  height: 44px;
+  padding: 0 14px;
+
+  border: 1px solid #ddd7cc;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #faf9f7;
+  color: #25231f;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+.category-form input::placeholder {
+  color: #aaa59c;
+}
+
+.category-form input:focus {
+  border-color: #b5aa99;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(181, 170, 153, 0.12);
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.category-form button,
+.category-card button {
+  height: 44px;
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* ADD / UPDATE */
+
+.category-form button {
+  background: #25231f;
+  color: #ffffff;
+}
+
+.category-form button:hover {
+  background: #11100e;
+  transform: translateY(-1px);
+}
+
+/* CANCEL */
+
+.category-form .cancel {
+  background: #eeeae3;
+  color: #45413a;
+}
+
+.category-form .cancel:hover {
+  background: #e2ddd4;
+}
+
+/* =========================================
+   CATEGORY LIST
+========================================= */
+
+.category-list {
+  display: grid;
+  gap: 12px;
+}
+
+/* CATEGORY CARD */
+
+.category-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 18px 20px;
+
+  background: #ffffff;
+  border: 1px solid #e5dfd5;
+  border-radius: 13px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.category-card:hover {
+  transform: translateY(-1px);
+  border-color: #d8d0c4;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* CATEGORY NAME */
+
+.category-card h2 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+
+  color: #25231f;
+}
+
+/* ACTIONS */
+
+.category-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.category-card button {
+  height: 36px;
+  padding: 0 14px;
+
+  background: #f1eee8;
+  color: #45413a;
+}
+
+.category-card button:hover {
+  background: #e5e0d7;
+}
+
+/* DELETE */
+
+.category-card button:last-child {
+  background: #fbeaea;
+  color: #b53a3a;
+}
+
+.category-card button:last-child:hover {
+  background: #f6dcdc;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-category {
+  padding: 55px 20px;
+
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #e5dfd5;
+  border-radius: 14px;
+
+  color: #888278;
+  font-size: 14px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-categories {
+    padding: 90px 20px 45px;
+  }
+
+  .categories-header {
+    align-items: flex-start;
+  }
+
+  .categories-header h1 {
+    font-size: 28px;
+  }
+
+  .category-form {
+    padding: 16px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+
+  .admin-categories {
+    width: 100%;
+    max-width: 100%;
+    padding: 88px 15px 35px;
+    overflow-x: hidden;
+  }
+
+  .categories-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .categories-header h1 {
+    font-size: 25px;
+  }
+
+  .categories-header p {
+    font-size: 13px;
+  }
+
+  .category-count {
+    min-width: 85px;
+    padding: 11px 12px;
+  }
+
+  .category-count strong {
+    font-size: 23px;
+  }
+
+  .category-count span {
+    font-size: 10px;
+  }
+
+  /* FORM */
+
+  .category-form {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .category-form input {
+    width: 100%;
+    flex: none;
+  }
+
+  .category-form button {
+    flex: 1;
+    min-width: 0;
+    padding: 0 10px;
+  }
+
+  /* CARDS */
+
+  .category-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    padding: 17px;
+  }
+
+  .category-card h2 {
+    font-size: 16px;
+  }
+
+  .category-actions {
+    width: 100%;
+  }
+
+  .category-actions button {
+    flex: 1;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .categories-header {
+    flex-direction: column;
+  }
+
+  .category-count {
+    width: 100%;
+  }
+
+  .category-form {
+    gap: 8px;
+  }
+
+  .category-form button {
+    font-size: 12px;
+  }
+}
