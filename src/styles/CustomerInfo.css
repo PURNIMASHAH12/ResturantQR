@@ -1,0 +1,63 @@
+.customer-info-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+}
+
+.customer-info-card {
+  width: 380px;
+  padding: 35px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px #0002;
+}
+
+.customer-info-card h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.customer-info-card p {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.customer-info-card label {
+  display: block;
+  margin: 15px 0 6px;
+  font-weight: 600;
+}
+
+.customer-info-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.customer-info-card input:focus {
+  outline: none;
+  border-color: #ff7a00;
+}
+
+.customer-info-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #ff7a00;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.customer-info-card button:hover {
+  background: #e96d00;
+}

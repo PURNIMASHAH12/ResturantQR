@@ -1,0 +1,58 @@
+.admin-categories {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+.admin-categories h1 {
+  margin-bottom: 25px;
+}
+
+.category-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.category-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.category-form button,
+.category-card button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.category-form button {
+  background: #222;
+  color: white;
+}
+
+.category-list {
+  display: grid;
+  gap: 15px;
+}
+
+.category-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #ddd;
+}
+
+.category-card h2 {
+  margin: 0;
+}
+
+.category-card button {
+  margin-left: 8px;
+}
