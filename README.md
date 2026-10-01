@@ -263,6 +263,8 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 ```
 
+For Render, add `MONGO_URI` and `JWT_SECRET` in the backend web service's **Environment** settings. Set `MONGO_URI` to your actual MongoDB connection string (for example, a MongoDB Atlas connection string); do not include the placeholder above or commit your `.env` file. The server waits for MongoDB to connect before it starts listening.
+
 Start the backend:
 
 ```bash
