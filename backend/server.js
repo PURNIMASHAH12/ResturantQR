@@ -6,7 +6,7 @@ require("dotenv").config();
 const connectDB = require("./config/DB");
 const {
   initSocket,
-} = require("./socket");
+} = require("./Socket");
 startOrderCleanup();
 const categoryRoutes = require("./routes/CategoryRoutes");
 const foodRoutes = require("./routes/FoodRoutes");
