@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Order = require("../models/Order");
 const { prepareItems, validateCreateOrder,} = require("./OrderValidationService");
 const { total,generateOrderId,} = require("./OrderHelperService");
-const { getIO } = require("../socket");
+const { getIO } = require("../Socket");
 const { printOrder } = require("./PrintService");
 const getOrder = (id) =>
   Order.findById(id).populate(
